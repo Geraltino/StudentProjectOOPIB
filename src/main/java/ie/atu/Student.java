@@ -9,13 +9,18 @@ public class Student {
 
     //Setters
     public void setStudentName(String studentName){
-        this.studentName = studentName;
-    }
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Student Name: ");
+        this.studentName = scanner.nextLine();}
     public void setStudentEmail(String studentEmail){
-        this.studentEmail = studentEmail;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Student Email: ");
+        this.studentEmail = scanner.nextLine();
     }
     public void setCourseName(String courseName){
-        this.courseName = courseName;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Course Name: ");
+        this.courseName = scanner.nextLine();
     }
 
     //Getters
@@ -29,22 +34,21 @@ public class Student {
         return courseName;
     }
 
-    // Method to get user input
-    public void getUserInput(){
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter Student Name: ");
-        this.studentName = scanner.nextLine();
-
-        System.out.print("Enter Student Email: ");
-        this.studentEmail = scanner.nextLine();
-
-        System.out.print("Enter Course Name: ");
-        this.courseName = scanner.nextLine();
+    public Student(){
+        this.studentName = "DefaultName";
+        this.studentEmail = "DefaultEmail@atu.ie";
+        this.courseName = "DefaultCourse";
     }
 
-    // Display Info from Getters
+    //Constructor
+    public Student(String studentName, String studentEmail, String courseName){
+        this.studentName = studentName;
+        this.studentEmail = studentEmail;
+        this.courseName = courseName;
+    }
+
+
     public void displayInfo() {
-        System.out.println("Student Name: " + getStudentName() + " Student Email:" + getStudentEmail() + " Course Name: " + getCourseName());
+        System.out.println("\nStudent Name: " + getStudentName() + "\nStudent Email: " + getStudentEmail() + "\nCourse Name: " + getCourseName());
     }
 }
