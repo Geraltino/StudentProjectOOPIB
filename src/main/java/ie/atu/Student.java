@@ -8,20 +8,15 @@ public class Student {
 
 
     //Setters
-    public void setStudentName(String studentName){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter Student Name: ");
-        this.studentName = scanner.nextLine();}
+    public void setStudentName(String studentName){this.studentName = studentName;}
     public void setStudentEmail(String studentEmail){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter Student Email: ");
-        this.studentEmail = scanner.nextLine();
+        this.studentEmail = studentEmail;
     }
     public void setCourseName(String courseName){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter Course Name: ");
-        this.courseName = scanner.nextLine();
+        this.courseName = courseName;
     }
+
+
 
     //Getters
     public String getStudentName(){
@@ -40,6 +35,9 @@ public class Student {
         this.courseName = "DefaultCourse";
     }
 
+    public Student(String studentName){
+        this.studentName = studentName;
+    }
     //Constructor
     public Student(String studentName, String studentEmail, String courseName){
         this.studentName = studentName;
