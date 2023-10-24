@@ -6,36 +6,8 @@ public class Student {
     private String studentEmail;
     private String courseName;
 
-    // Default Constructor
-    public Student(){
-        this.studentName = "DefaultName";
-        this.studentEmail = "DefaultEmail@atu.ie";
-        this.courseName = "DefaultCourse";
-    }
-    //Constructor
-    public Student(String studentName, String studentEmail, String courseName){
-        this.studentName = studentName;
-        this.studentEmail = studentEmail;
-        this.courseName = courseName;
-    }
 
-    // Method to get user input
-    public void getUserInput(){
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter Student Name: ");
-        this.studentName = scanner.nextLine();
-
-        System.out.print("Enter Student Email: ");
-        this.studentEmail = scanner.nextLine();
-
-        System.out.print("Enter Course Name: ");
-        this.courseName = scanner.nextLine();
-
-
-    }
-
-    //setters
+    //Setters
     public void setStudentName(String studentName){
         this.studentName = studentName;
     }
@@ -57,6 +29,21 @@ public class Student {
         return courseName;
     }
 
+    // Method to get user input
+    public void getUserInput(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Student Name: ");
+        this.studentName = scanner.nextLine();
+
+        System.out.print("Enter Student Email: ");
+        this.studentEmail = scanner.nextLine();
+
+        System.out.print("Enter Course Name: ");
+        this.courseName = scanner.nextLine();
+    }
+
+    // Display Info from Getters
     public void displayInfo() {
         System.out.println("Student Name: " + getStudentName() + " Student Email:" + getStudentEmail() + " Course Name: " + getCourseName());
     }
